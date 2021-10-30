@@ -59,6 +59,7 @@ const Home = () => {
               <TableCell align="right">Temperature (C)</TableCell>
               <TableCell align="right">Humidity (%)</TableCell>
               <TableCell align="left">Time</TableCell>
+              <TableCell align="right">Status</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -74,6 +75,7 @@ const Home = () => {
                 <TableCell align="right">{row.temperature} °C</TableCell>
                 <TableCell align="right">{row.humidity} %</TableCell>
                 <TableCell align="left">{row.timestamp ? row.timestamp : moment().format('YYYY-MM-DD HH:m:s')}</TableCell>
+                <TableCell align="right">{row.temperature > 3 ? "Critical" : "Ok" }</TableCell>
               </TableRow>
             ))}
           </TableBody>
