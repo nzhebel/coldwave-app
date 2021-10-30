@@ -23,13 +23,15 @@ function App() {
       </AppBar>
     </Box>
       <main>
-      <Grid container spacing={2}>
+      <Grid container >
         <Grid xs={1} md={3}>
         </Grid>
-        <Grid item xs={2} md={6}>
+        <Grid item>
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
+        </Grid>
+        <Grid xs={1} md={3}>
         </Grid>
       </Grid>
       </main>
