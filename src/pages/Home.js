@@ -17,50 +17,6 @@ const Home = () => {
 
   const ref = firebase.firestore().collection('FridgeMeasurements');
 
-  // function getTemperatures() {
-  //   setLoading(true);
-  //   ref.onSnapshot((querySnapshot) => {
-  //     const items = [];
-  //     querySnapshot.forEach((doc) => {
-  //       items.push(doc.data());
-  //     });
-  //     setTemperatures(items);
-  //     setLoading(false);
-  //   })
-  // }
-
-  const data = {
-      'fridgeId': '1',
-      'warehouseid': '1-1',
-      'temperature': -2.4
-  }
-
-  appwrite
-    .account.create('admin1@example.com', 'adminpassword', 'John Doe')
-        .then(function (response) {
-            console.log(response);
-        }, function (error) {
-            console.log(error);
-        });
-
-  let promise = appwrite.account.createSession("admin1@example.com", "adminpassword");
-  promise.then(
-    function (response) {
-      console.log(response); // Success
-    },
-    function (error) {
-      console.log(error); // Failure
-    }
-  );
-
-  let result = appwrite.database.createDocument('617ff8149f0f3', data);
-
-  result.then(function (response) {
-      console.log(response); // Success
-  }, function (error) {
-      console.log(error); // Failure
-  });
-
   function getTemperatures2() {
     setLoading(true);
     ref.get().then((item) => {
