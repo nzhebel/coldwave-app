@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Coldwave App (BCG Platinion Hackathon 2021)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+THis project was created as part of the BCG Platinion Hackathon 2021. It is the frontend for the Coldwave project that was developed in order to suppoert the monitoring of cooling chains an fridges. It is based on React and a Firebase Backend.
+
+For deployement the included "Config.example.json" needs to be completed with the relevant Firebase settings before deploymnet.
 
 ## Available Scripts
 
